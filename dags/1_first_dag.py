@@ -1,36 +1,29 @@
 from airflow.sdk import dag,task
 
 
-@dag(dag_id='xcom_dag')
-def xcoms_dag_auto():
+@dag(dag_id='first_dag')
+def first_dag():
     
     @task.python
     def first_task():
-        print("Extracting data.... This is the first task")
-        fetched_data = {"data":[1,2,3,4,5]}
-        return fetched_data
+        print("This is the first task")
     
     @task.python
-    def second_task(data:dict):
-
-        fetched_data = data['data']
-        transformed_data = [x*2 for x in fetched_data]
-        return {"transformed_data":transformed_data}
-    
+    def second_task():
+        print("This is the second task")
     
     
     @task.python
-    def third_task(data:dict):
-        
-        load_data = data["transformed_data"]
-        return load_data
+    def third_task():
+        print("This is the third task")
     
     
     #defining task dependency
     first = first_task()
-    second = second_task(first)
-    third = third_task(second)
-
+    second = second_task()
+    third = third_task()
+    
+    first >> second >> third
 
 #instantiating the dag
-xcoms_dag_auto()
+first_dag()
