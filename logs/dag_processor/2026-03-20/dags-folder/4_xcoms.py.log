@@ -31,3 +31,4 @@
 {"timestamp":"2026-03-20T20:33:39.760603Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/4_xcoms.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
 {"timestamp":"2026-03-20T20:34:10.731276Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/4_xcoms.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
 {"timestamp":"2026-03-20T20:34:41.726002Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/4_xcoms.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-20T20:35:12.729142Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/4_xcoms.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}

@@ -1,8 +1,8 @@
 from airflow.sdk import dag,task
 
 
-@dag(dag_id='xcom_dag')
-def xcoms_dag_auto():
+@dag(dag_id='xcom_dag_manual')
+def xcoms_dag_manual():
     
     @task.python
     def first_task():
@@ -33,4 +33,4 @@ def xcoms_dag_auto():
 
 
 #instantiating the dag
-xcoms_dag_auto()
+xcoms_dag_manual()
